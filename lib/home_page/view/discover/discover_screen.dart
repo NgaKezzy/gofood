@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gofood/config/app_color.dart';
 import 'package:gofood/config/app_size.dart';
+import 'package:gofood/home_page/view/discover/widgets/category.dart';
+import 'package:gofood/home_page/view/discover/widgets/delicious-foods.dart';
 import 'package:gofood/home_page/view/discover/widgets/discount_stores.dart';
 import 'package:gofood/home_page/view/discover/widgets/typical_discount.dart';
 
@@ -151,87 +153,11 @@ class DiscoverScreen extends StatelessWidget {
                           child: ListView(
                               physics: BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
-                              children: [
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
+                              children: const [
+                                Category(),
+                                Category(),
+                                Category(),
+                                Category(),
                               ]),
                         ),
                         Container(
@@ -242,87 +168,11 @@ class DiscoverScreen extends StatelessWidget {
                           child: ListView(
                               physics: BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
-                              children: [
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
-                                Container(
-                                  width: 90,
-                                  margin: EdgeInsets.only(left: 10, right: 10),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: AppColors.grey,
-                                    ),
-                                    borderRadius: BorderRadius.circular(25),
-                                  ),
-                                ),
+                              children: const [
+                                Category(),
+                                Category(),
+                                Category(),
+                                Category(),
                               ]),
                         ),
                         SizedBox(height: 30),
@@ -432,7 +282,14 @@ class DiscoverScreen extends StatelessWidget {
                         Container(
                           height: AppSize.sizeHeightApp * 0.15,
                           width: AppSize.sizeWidthApp,
-                          color: AppColors.green,
+                          child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                DeliciousFoods(),
+                                DeliciousFoods(),
+                                DeliciousFoods(),
+                                DeliciousFoods(),
+                              ]),
                         )
                       ],
                     ),
