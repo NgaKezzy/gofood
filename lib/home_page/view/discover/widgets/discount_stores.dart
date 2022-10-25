@@ -54,7 +54,7 @@ class DiscountStores extends StatelessWidget {
                     decoration: const BoxDecoration(
                       color: AppColors.red,
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
+                        topLeft: Radius.circular(20),
                         topRight: Radius.circular(15),
                         bottomRight: Radius.circular(15),
                       ),

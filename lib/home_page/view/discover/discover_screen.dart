@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gofood/config/app_color.dart';
 import 'package:gofood/config/app_size.dart';
+import 'package:gofood/home_page/view/discover/widgets/buttom-all.dart';
 import 'package:gofood/home_page/view/discover/widgets/category.dart';
 import 'package:gofood/home_page/view/discover/widgets/delicious-foods.dart';
 import 'package:gofood/home_page/view/discover/widgets/discount_stores.dart';
@@ -33,7 +34,7 @@ class DiscoverScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             color: AppColors.white),
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
                           children: const [
                             Icon(Icons.search),
@@ -119,7 +120,7 @@ class DiscoverScreen extends StatelessWidget {
                           color: AppColors.grey,
                         ),
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
                           width: AppSize.sizeWidthApp,
                           height: AppSize.sizeHeightApp * 0.085,
                           decoration: BoxDecoration(
@@ -128,7 +129,7 @@ class DiscoverScreen extends StatelessWidget {
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Bạn có 2 ưu đãi'),
+                                const Text('Bạn có 2 ưu đãi'),
                                 Container(
                                   alignment: Alignment.center,
                                   height: 25,
@@ -147,11 +148,11 @@ class DiscoverScreen extends StatelessWidget {
                         ),
                         Container(
                           height: 90,
-                          margin: EdgeInsets.only(
+                          margin: const EdgeInsets.only(
                             top: 30,
                           ),
                           child: ListView(
-                              physics: BouncingScrollPhysics(),
+                              physics: const BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               children: const [
                                 Category(),
@@ -162,11 +163,11 @@ class DiscoverScreen extends StatelessWidget {
                         ),
                         Container(
                           height: 90,
-                          margin: EdgeInsets.only(
+                          margin: const EdgeInsets.only(
                             top: 30,
                           ),
                           child: ListView(
-                              physics: BouncingScrollPhysics(),
+                              physics: const BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               children: const [
                                 Category(),
@@ -175,14 +176,14 @@ class DiscoverScreen extends StatelessWidget {
                                 Category(),
                               ]),
                         ),
-                        SizedBox(height: 30),
-                        Container(
+                        const SizedBox(height: 30),
+                        SizedBox(
                           width: AppSize.sizeWidthApp,
                           height: AppSize.sizeHeightApp * 0.08,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: AppSize.sizeWidthApp * 0.60 - 20,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,24 +204,10 @@ class DiscoverScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Container(
-                                alignment: Alignment.center,
-                                width: AppSize.sizeWidthApp * 0.35 - 20,
-                                height: AppSize.sizeHeightApp * 0.05,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: AppColors.green.withOpacity(0.2)),
-                                child: const Text(
-                                  'Xem tất cả',
-                                  style: TextStyle(
-                                      color: AppColors.green,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
+                              ButtomAll(),
                             ],
                           ),
                         ),
@@ -252,29 +239,15 @@ class DiscoverScreen extends StatelessWidget {
                         Row(children: [
                           SizedBox(
                             width: AppSize.sizeWidthApp * 0.65 - 25,
-                            child: Text(
+                            child: const Text(
                               'DANH MỤC MÓN NGON MỜI BẠN CHỌN',
                               style: TextStyle(fontWeight: FontWeight.w600),
                             ),
                           ),
-                          SizedBox(
-                            width: 10,
+                          const SizedBox(
+                            width: 5,
                           ),
-                          Container(
-                            alignment: Alignment.center,
-                            width: AppSize.sizeWidthApp * 0.35 - 25,
-                            height: AppSize.sizeHeightApp * 0.05,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: AppColors.green.withOpacity(0.2)),
-                            child: const Text(
-                              'Xem tất cả',
-                              style: TextStyle(
-                                  color: AppColors.green,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                          ),
+                          const ButtomAll(),
                         ]),
                         const SizedBox(
                           height: 20,
@@ -284,7 +257,7 @@ class DiscoverScreen extends StatelessWidget {
                           width: AppSize.sizeWidthApp,
                           child: ListView(
                               scrollDirection: Axis.horizontal,
-                              children: [
+                              children: const [
                                 DeliciousFoods(),
                                 DeliciousFoods(),
                                 DeliciousFoods(),
