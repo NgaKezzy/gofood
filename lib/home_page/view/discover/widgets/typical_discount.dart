@@ -37,7 +37,7 @@ class TypicalDiscount extends StatelessWidget {
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(15),
                       bottomRight: Radius.circular(15)),
-                  color: AppColors.grey,
+                  color: AppColors.pink,
                 )),
             const SizedBox(
               width: 5,
@@ -50,7 +50,7 @@ class TypicalDiscount extends StatelessWidget {
                       topLeft: Radius.circular(15),
                       topRight: Radius.circular(25),
                       bottomLeft: Radius.circular(15)),
-                  color: AppColors.grey,
+                  color: AppColors.green,
                 )),
           ]),
         ),

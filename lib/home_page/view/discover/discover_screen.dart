@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:gofood/config/app_color.dart';
 import 'package:gofood/config/app_size.dart';
@@ -7,6 +5,8 @@ import 'package:gofood/home_page/view/discover/widgets/buttom-all.dart';
 import 'package:gofood/home_page/view/discover/widgets/category.dart';
 import 'package:gofood/home_page/view/discover/widgets/delicious-foods.dart';
 import 'package:gofood/home_page/view/discover/widgets/discount_stores.dart';
+import 'package:gofood/home_page/view/discover/widgets/recommen-shop.dart';
+import 'package:gofood/home_page/view/discover/widgets/standout-shop.dart';
 import 'package:gofood/home_page/view/discover/widgets/typical_discount.dart';
 
 class DiscoverScreen extends StatelessWidget {
@@ -252,10 +252,11 @@ class DiscoverScreen extends StatelessWidget {
                         const SizedBox(
                           height: 20,
                         ),
-                        Container(
+                        SizedBox(
                           height: AppSize.sizeHeightApp * 0.15,
                           width: AppSize.sizeWidthApp,
                           child: ListView(
+                              physics: const BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               children: const [
                                 DeliciousFoods(),
@@ -263,6 +264,115 @@ class DiscoverScreen extends StatelessWidget {
                                 DeliciousFoods(),
                                 DeliciousFoods(),
                               ]),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: AppSize.sizeWidthApp * 0.65 - 20,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    'Đổi vị món mới',
+                                    style: TextStyle(
+                                        fontSize: AppSize.size15,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  Text(
+                                    'Menu mới xuất sắc cần phải thử ngay',
+                                    style: TextStyle(
+                                      fontSize: AppSize.size13,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: AppSize.sizeWidthApp * 0.35 - 20,
+                              child: ButtomAll(),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        SizedBox(
+                          height: AppSize.sizeHeightApp * 0.33,
+                          width: AppSize.sizeWidthApp,
+                          child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: const [
+                                DiscountStores(),
+                                DiscountStores(),
+                                DiscountStores(),
+                              ]),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          children: const [
+                            Text(
+                              'Thương hiệu nổi bật',
+                              style: TextStyle(
+                                  fontSize: AppSize.size15,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        SizedBox(
+                          height: AppSize.sizeHeightApp * 0.25,
+                          width: AppSize.sizeWidthApp,
+                          child: ListView(
+                            physics: const BouncingScrollPhysics(),
+                            scrollDirection: Axis.horizontal,
+                            children: const [
+                              StandoutShop(),
+                              StandoutShop(),
+                              StandoutShop(),
+                              StandoutShop(),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SizedBox(
+                          width: AppSize.sizeWidthApp,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'Thêm gợi ý để bạn chọn',
+                                style: TextStyle(
+                                    fontSize: AppSize.size15,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                'Toàn món tuyển, đảm bảo bạn sẽ mê !',
+                                style: TextStyle(
+                                  fontSize: AppSize.size13,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: const [
+                            // hiện các quán đc đề xuất
+                            RecommenShop(),
+                            RecommenShop(),
+                            RecommenShop(),
+                            RecommenShop(),
+
+                            RecommenShop(),
+                          ],
                         )
                       ],
                     ),

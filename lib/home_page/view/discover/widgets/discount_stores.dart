@@ -12,9 +12,9 @@ class DiscountStores extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       width: AppSize.sizeWidthApp * 0.5,
-      height: AppSize.sizeHeightApp * 0.33,
+      height: AppSize.sizeHeightApp * 0.31,
       child: Container(
-        height: AppSize.sizeHeightApp * 0.33,
+        height: AppSize.sizeHeightApp * 0.31,
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
           width: AppSize.sizeWidthApp * 0.5,
@@ -25,11 +25,8 @@ class DiscountStores extends StatelessWidget {
             boxShadow: const [
               BoxShadow(
                 color: AppColors.grey,
-                blurRadius: 3,
-                offset: Offset(
-                  0,
-                  2,
-                ), // Shadow position
+                blurRadius: 2,
+                offset: Offset(0, 1), // Shadow position
               ),
             ],
           ),
@@ -40,7 +37,7 @@ class DiscountStores extends StatelessWidget {
                 children: [
                   Container(
                     width: AppSize.sizeWidthApp * 0.5,
-                    height: AppSize.sizeHeightApp * 0.2,
+                    height: AppSize.sizeHeightApp * 0.18,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         image: const DecorationImage(
