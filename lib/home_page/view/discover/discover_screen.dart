@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:gofood/config/app_color.dart';
 import 'package:gofood/config/app_size.dart';
 import 'package:gofood/home_page/view/discover/widgets/buttom-all.dart';
@@ -8,6 +9,7 @@ import 'package:gofood/home_page/view/discover/widgets/discount_stores.dart';
 import 'package:gofood/home_page/view/discover/widgets/recommen-shop.dart';
 import 'package:gofood/home_page/view/discover/widgets/standout-shop.dart';
 import 'package:gofood/home_page/view/discover/widgets/typical_discount.dart';
+import 'package:gofood/home_page/view/me/me_screen.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({super.key});
@@ -45,8 +47,14 @@ class DiscoverScreen extends StatelessWidget {
                           ],
                         )),
                     const SizedBox(width: 20),
-                    const CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/ngakezzy.jpg'),
+                    InkWell(
+                      onTap: () {
+                        Get.to(MeScreen());
+                      },
+                      child: const CircleAvatar(
+                        backgroundImage:
+                            AssetImage('assets/images/ngakezzy.jpg'),
+                      ),
                     ),
                     const SizedBox(height: 20),
                   ],
@@ -58,7 +66,7 @@ class DiscoverScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: AppSize.sizeHeightApp - 173,
+            height: AppSize.sizeHeightApp - 175,
             width: AppSize.sizeWidthApp,
             child: SingleChildScrollView(
               physics: const BouncingScrollPhysics(),
